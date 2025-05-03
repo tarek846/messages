@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Messages</h1>
+    <table>
+        <thead>
+            <th>name</th>
+            <th>email</th>
+            <th>message</th>
+        </thead>
+        {% for x in messages %}
+        <tr>
+            <td>{{x[1]}}</td>
+            <td>{{x[2]}}</td>
+            <td>{{x[3]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back to home</a>
+</body>
+</html>
